@@ -166,7 +166,7 @@ class _Singup2ScreenState extends State<Singup2Screen> {
               child: ElevatedButton.icon(
                 label: Text("ถัดไป", style: TextStyle(fontSize: 20)),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/singup2');
+                  Navigator.pushNamed(context, '/singup3');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 67, 154, 67),

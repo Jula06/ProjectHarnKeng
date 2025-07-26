@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:myproject/Screen/Singup.dart';
+import 'package:myproject/Screen/change.dart';
 import 'package:myproject/Screen/home.dart';
 import 'package:myproject/Screen/home2.dart';
 import 'package:myproject/Screen/home3.dart';
 import 'package:myproject/Screen/home4.dart';
 import 'package:myproject/Screen/singup2.dart';
+import 'package:myproject/Screen/singup3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/home4': (context) => Home4Screen(),
         '/singup': (context) => SingupScreen(),
         '/singup2': (context) => Singup2Screen(),
+        '/singup3': (context) => Singup3Screen(),
+        '/change': (context) => ChangeScreen(),
 
       },
     );
