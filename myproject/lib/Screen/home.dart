@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/home2');
                   },
                   child: Text(
-                    "ข้อกำหนด  | ",
+                    "ข้อกำหนด    |",
                     style: TextStyle(color: const Color.fromARGB(255, 2, 99, 53)),
                   ),
                 ),
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                     Navigator.pushNamed(context, '/home3');
                   },
                   child: Text(
-                    "นโยบายความเป็นส่วนตัว  | ",
+                    "นโยบายความเป็นส่วนตัว    |",
                     style: TextStyle(color: const Color.fromARGB(255, 2, 99, 53)),
                   ),
                 ),

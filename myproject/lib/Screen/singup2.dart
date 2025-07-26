@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SingupScreen extends StatelessWidget {
+class Singup2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +24,7 @@ class SingupScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start, // Change from center to start
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Logo Image
@@ -47,9 +47,9 @@ class SingupScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20), // Space between logo and app name
+            SizedBox(height: 20), // Adjust space after logo
 
-            // Align the text to the left
+            // App Name Text
             Row(
               mainAxisAlignment: MainAxisAlignment.start, // Align text to the left
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,13 +64,12 @@ class SingupScreen extends StatelessWidget {
                 ),
               ],
             ),
-            
-            SizedBox(height: 20), // Space before form
+            SizedBox(height: 10), // Space before form
 
             // Signup Form
             TextField(
               decoration: InputDecoration(
-                hintText: 'ที่อยู่อีเมล',
+                hintText: 'ชื่อผู้ใช้',
                 filled: true,
                 fillColor: Colors.grey[200],
                 border: OutlineInputBorder(
@@ -80,41 +79,25 @@ class SingupScreen extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               ),
             ),
-            SizedBox(height: 15),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: 'รหัสผ่าน',
-                filled: true,
-                fillColor: Colors.grey[200],
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  borderSide: BorderSide.none,
-                ),
-                contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              ),
-            ),
-            
-            // Align the "8 characters" text to the left
-            SizedBox(height: 5),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start, // Align text to the left
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Text(
-                  '*ต้องมีตัวอักขระอย่างน้อย 8 ตัว',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 35, 35, 35),
-                  ),
-                ),
-              ],
-            ),
-            
-            SizedBox(height: 30),
 
-            // Signup Button
+            SizedBox(height: 20), // Space between username and next button
+
+            // Phone number input (country code and number)
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'หมายเลขโทรศัพท์',
+                filled: true,
+                fillColor: Colors.grey[200],
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  borderSide: BorderSide.none,
+                ),
+                contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+              ),
+            ),
+            SizedBox(height: 30), // Space before button
+
+            // Next Button
             SizedBox(
               width: 200,
               child: ElevatedButton.icon(

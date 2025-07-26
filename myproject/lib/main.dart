@@ -4,6 +4,7 @@ import 'package:myproject/Screen/home.dart';
 import 'package:myproject/Screen/home2.dart';
 import 'package:myproject/Screen/home3.dart';
 import 'package:myproject/Screen/home4.dart';
+import 'package:myproject/Screen/singup2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/home3': (context) => Home3Screen(),
         '/home4': (context) => Home4Screen(),
         '/singup': (context) => SingupScreen(),
+        '/singup2': (context) => Singup2Screen(),
+
       },
     );
   }
