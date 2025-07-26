@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Singup2Screen extends StatelessWidget {
+class Singup2Screen extends StatefulWidget {
+  @override
+  _Singup2ScreenState createState() => _Singup2ScreenState();
+}
+
+class _Singup2ScreenState extends State<Singup2Screen> {
+  String? _selectedCountryCode = '+66'; // Default to Thailand code
+  TextEditingController _phoneController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,21 +87,73 @@ class Singup2Screen extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               ),
             ),
-
             SizedBox(height: 20), // Space between username and next button
 
             // Phone number input (country code and number)
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'หมายเลขโทรศัพท์',
-                filled: true,
-                fillColor: Colors.grey[200],
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  borderSide: BorderSide.none,
+            Row(
+              children: [
+                // Country Code Dropdown
+                DropdownButton<String>(
+                  value: _selectedCountryCode,
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      _selectedCountryCode = newValue!;
+                    });
+                  },
+                  items: <String>['+66', '+1', '+44', '+81']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    String flagImage = '';
+                    switch (value) {
+                      case '+66':
+                        flagImage = 'assets/images/logo.png';
+                        break;
+                      case '+1':
+                        flagImage = 'assets/images/eng.png';
+                        break;
+                      case '+44':
+                        flagImage = 'assets/images/usa.png';
+                        break;
+                      case '+81':
+                        flagImage = 'assets/images/japan.png';
+                        break;
+                    }
+
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            flagImage, 
+                            width: 24,
+                            height: 24,
+                          ),
+                          SizedBox(width: 8),
+                          Text(value),
+                        ],
+                      ),
+                    );
+                  }).toList(),
                 ),
-                contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-              ),
+                SizedBox(width: 10),
+
+                // Phone Number TextField
+                Expanded(
+                  child: TextField(
+                    controller: _phoneController,
+                    decoration: InputDecoration(
+                      hintText: 'หมายเลขโทรศัพท์',
+                      filled: true,
+                      fillColor: Colors.grey[200],
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: BorderSide.none,
+                      ),
+                      contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    ),
+                    keyboardType: TextInputType.phone,
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 30), // Space before button
 
