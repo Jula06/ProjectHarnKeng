@@ -57,7 +57,7 @@ class SingupScreen extends StatelessWidget {
             // Signup Form
             TextField(
               decoration: InputDecoration(
-                hintText: 'อีเมล',
+                hintText: 'ที่อยู่อีเมล',
                 filled: true,
                 fillColor: Colors.grey[200],
                 border: OutlineInputBorder(
