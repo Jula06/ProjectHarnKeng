@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myproject/Screen/Singup.dart';
 import 'package:myproject/Screen/home.dart';
 import 'package:myproject/Screen/home2.dart';
 import 'package:myproject/Screen/home3.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/home2': (context) => Home2Screen(),
         '/home3': (context) => Home3Screen(),
-        '/home4': (context) => Home4Screen(), 
+        '/home4': (context) => Home4Screen(),
+        '/singup': (context) => SingupScreen(),
       },
     );
   }

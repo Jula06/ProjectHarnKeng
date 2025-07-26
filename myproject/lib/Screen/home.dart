@@ -39,7 +39,9 @@ class HomeScreen extends StatelessWidget {
               child: ElevatedButton.icon(
                 icon: Icon(Icons.add),
                 label: Text("สมัครใช้งาน", style: TextStyle(fontSize: 20)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/singup');
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 19, 117, 22),
                   foregroundColor: Colors.white,

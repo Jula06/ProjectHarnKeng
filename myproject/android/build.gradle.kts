@@ -1,8 +1,10 @@
-id("com.google.gms.google-services") version "4.4.3" 
 allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+    dependencies {
+        id("com.google.gms.google-services") version "4.4.3"
     }
 }
 

@@ -10,11 +10,18 @@ class Home2Screen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false, // Prevent the default back button
-        leading: IconButton(
-          icon: const Icon(Icons.close),
+        leading: TextButton(
           onPressed: () {
             Navigator.pop(context);
           },
+          child: const Text(
+            'ปิด',
+            style: TextStyle(
+              fontSize: 18,
+              //fontWeight: FontWeight.bold,
+              color: Colors.white,  // Adjust text color to match AppBar
+            ),
+          ),
         ),
         title: Align(
           alignment: Alignment.center,
