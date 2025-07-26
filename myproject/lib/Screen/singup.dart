@@ -65,7 +65,7 @@ class SingupScreen extends StatelessWidget {
               ],
             ),
             
-            SizedBox(height: 20), // Space before form
+            SizedBox(height: 15), // Space before form
 
             // Signup Form
             TextField(

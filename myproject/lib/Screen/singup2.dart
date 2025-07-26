@@ -72,7 +72,7 @@ class _Singup2ScreenState extends State<Singup2Screen> {
                 ),
               ],
             ),
-            SizedBox(height: 10), // Space before form
+            SizedBox(height: 15), // Space before form
 
             // Signup Form
             TextField(
@@ -87,13 +87,15 @@ class _Singup2ScreenState extends State<Singup2Screen> {
                 contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               ),
             ),
-            SizedBox(height: 20), // Space between username and next button
+            SizedBox(height: 15), // Space between username and next button
 
             // Phone number input (country code and number)
             Row(
               children: [
                 // Country Code Dropdown
-                DropdownButton<String>(
+                Padding(
+                padding: const EdgeInsets.only(left: 10.0), // เพิ่มช่องว่างทางซ้าย
+                child: DropdownButton<String>(
                   value: _selectedCountryCode,
                   onChanged: (String? newValue) {
                     setState(() {
@@ -105,7 +107,7 @@ class _Singup2ScreenState extends State<Singup2Screen> {
                     String flagImage = '';
                     switch (value) {
                       case '+66':
-                        flagImage = 'assets/images/logo.png';
+                        flagImage = 'assets/images/thai.png';
                         break;
                       case '+1':
                         flagImage = 'assets/images/eng.png';
@@ -127,13 +129,14 @@ class _Singup2ScreenState extends State<Singup2Screen> {
                             width: 24,
                             height: 24,
                           ),
-                          SizedBox(width: 8),
+                          SizedBox(width: 5),
                           Text(value),
                         ],
                       ),
                     );
                   }).toList(),
                 ),
+              ),
                 SizedBox(width: 10),
 
                 // Phone Number TextField
