@@ -17,7 +17,7 @@ class ChangeScreen extends StatelessWidget {
             'ปิด',
             style: TextStyle(
               fontSize: 18,
-              color: Colors.white,  // Adjust text color to match AppBar
+              color: Colors.white,  // Adjust text color to match AppBar//////
             ),
           ),
         ),
