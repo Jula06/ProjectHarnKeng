@@ -4,10 +4,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
+      // ไม่ใช้ AppBar เพราะเราต้องการพื้นหลังเต็มหน้าจอ
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -16,7 +13,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(70, 10, 70, 0),
+          padding: const EdgeInsets.fromLTRB(70, 50, 70, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 50),
               // ใช้ Row เพื่อให้อยู่ในบรรทัดเดียวกัน
               Row(
                 mainAxisAlignment: MainAxisAlignment.center, // จัดตำแหน่งให้กลาง
