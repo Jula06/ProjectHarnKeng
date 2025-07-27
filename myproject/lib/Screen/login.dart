@@ -4,11 +4,26 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // ไม่มี AppBar ที่มีสีม่วง และไม่มีปุ่มย้อนกลับ
+      appBar: AppBar(
+        backgroundColor: Colors.transparent, // ใช้พื้นหลังโปร่งใส
+        elevation: 0, // ไม่มีเงา
+        leading: TextButton(
+          onPressed: () {
+            Navigator.pop(context); // ย้อนกลับไปหน้าก่อนหน้า
+          },
+          child: const Text(
+            "กลับ", // ข้อความที่แสดงในปุ่ม
+            style: TextStyle(
+              color: Colors.black, // สีข้อความเป็นสีดำ
+              fontSize: 16, // ขนาดตัวอักษร
+            ),
+          ),
+        ),
+      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/p.png"), // พื้นหลัง
+            image: AssetImage("assets/images/p.png"), 
             fit: BoxFit.cover, // ขยายภาพให้เต็มพื้นที่
           ),
         ),
@@ -19,6 +34,7 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // โลโก้
+              SizedBox(height: 20), // เพิ่มช่องว่างระหว่างขอบบนและโลโก้
               Container(
                 height: 150,
                 width: 150,
@@ -38,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 80), // Space between logo and app name
+              SizedBox(height: 70), // Space between logo and app name
 
               // Align the text to the left
               Row(
@@ -56,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               
-              SizedBox(height: 15), // Space before form
+              SizedBox(height: 50), // Space before form
 
               // Signup Form
               TextField(
@@ -71,7 +87,7 @@ class LoginScreen extends StatelessWidget {
                   contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -103,7 +119,7 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               
-              SizedBox(height: 30),
+              SizedBox(height: 50), // Space between form and buttons
 
               // Signup Button
               SizedBox(
@@ -123,7 +139,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
+              SizedBox(height: 10),
               TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '');
