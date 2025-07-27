@@ -12,10 +12,10 @@ class SingupScreen extends StatelessWidget {
             Navigator.pop(context); // Going back to the previous screen
           },
           child: const Text(
-            "ย้อนกลับ", // Text as the label instead of an icon
+            "กลับ", // Text as the label instead of an icon
             style: TextStyle(
               color: Colors.black,
-              fontSize: 16, // Adjust font size if necessary
+              fontSize: 14, // Adjust font size if necessary
               fontWeight: FontWeight.normal, // Make sure the font weight is normal for a clean look
             ),
           ),
@@ -47,7 +47,7 @@ class SingupScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20), // Space between logo and app name
+            SizedBox(height: 80), // Space between logo and app name
 
             // Align the text to the left
             Row(
@@ -80,7 +80,7 @@ class SingupScreen extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 20),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
