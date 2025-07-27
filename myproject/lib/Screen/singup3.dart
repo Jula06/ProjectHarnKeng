@@ -34,7 +34,7 @@ class _Singup3ScreenState extends State<Singup3Screen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/p.png"), // พื้นหลัง
+            image: AssetImage("assets/images/p.png"), 
             fit: BoxFit.cover, // ขยายภาพให้เต็มพื้นที่
           ),
         ),
