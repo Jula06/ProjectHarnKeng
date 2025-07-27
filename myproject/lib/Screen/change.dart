@@ -26,10 +26,10 @@ class _ChangeScreenState extends State<ChangeScreen> {
             ),
           ),
         ),
-        title: Align(
+        title: const Align( // Align title to the center
           alignment: Alignment.center,
-          child: const Text(
-            'สกุลเงินเริ่มต้น',
+          child: Text(
+            'สกุลเงินเริ่มต้น', // Centered title text
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
