@@ -67,11 +67,9 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 width: 200,
                 child: ElevatedButton.icon(
-                  icon: const Icon(Icons.login),
-                  label: const Text("เข้าสู่ระบบ", style: TextStyle(fontSize: 20)),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/login');
-                  },
+                  icon: Icon(Icons.login),
+                  label: Text("เข้าสู่ระบบ", style: TextStyle(fontSize: 20)),
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 90, 100, 90),
                     foregroundColor: Colors.white,
