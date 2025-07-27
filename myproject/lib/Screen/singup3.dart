@@ -20,14 +20,13 @@ class _Singup3ScreenState extends State<Singup3Screen> {
         elevation: 0,
         leading: TextButton(
           onPressed: () {
-            Navigator.pop(context); // Going back to the previous screen
+            Navigator.pop(context);
           },
           child: const Text(
-            "ย้อนกลับ", // Text as the label instead of an icon
+            "กลับ",
             style: TextStyle(
               color: Colors.black,
-              fontSize: 16, // Adjust font size if necessary
-              fontWeight: FontWeight.normal, // Make sure the font weight is normal for a clean look
+              fontSize: 16,
             ),
           ),
         ),
@@ -38,7 +37,7 @@ class _Singup3ScreenState extends State<Singup3Screen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Logo Image
+            // โลโก้
             Container(
               height: 150,
               width: 150,
@@ -58,14 +57,13 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                 ),
               ),
             ),
-            SizedBox(height: 20), // Adjust space after logo
+            const SizedBox(height: 20),
 
-            // App Name Text
+            // หัวข้อ
             Row(
-              mainAxisAlignment: MainAxisAlignment.start, // Align text to the left
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Text(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                Text(
                   'สมัครใช้งาน',
                   style: TextStyle(
                     fontSize: 20,
@@ -75,9 +73,9 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                 ),
               ],
             ),
-            SizedBox(height: 15), // Space before form
+            const SizedBox(height: 15),
 
-            // Signup Form
+            // ช่องชื่อผู้ใช้
             TextField(
               decoration: InputDecoration(
                 hintText: 'ชื่อผู้ใช้',
@@ -87,17 +85,16 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide.none,
                 ),
-                contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
               ),
             ),
-            SizedBox(height: 15), // Space between username and next button
+            const SizedBox(height: 15),
 
-            // Phone number input (country code and number)
+            // เบอร์โทร
             Row(
               children: [
-                // Country Code Dropdown
                 Padding(
-                  padding: const EdgeInsets.only(left: 10.0), // เพิ่มช่องว่างทางซ้าย
+                  padding: const EdgeInsets.only(left: 10.0),
                   child: DropdownButton<String>(
                     value: _selectedCountryCode,
                     onChanged: (String? newValue) {
@@ -105,8 +102,7 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                         _selectedCountryCode = newValue!;
                       });
                     },
-                    items: <String>['+66', '+1', '+44', '+81']
-                        .map<DropdownMenuItem<String>>((String value) {
+                    items: <String>['+66', '+1', '+44', '+81'].map((String value) {
                       String flagImage = '';
                       switch (value) {
                         case '+66':
@@ -127,12 +123,8 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                         value: value,
                         child: Row(
                           children: [
-                            Image.asset(
-                              flagImage,
-                              width: 24,
-                              height: 24,
-                            ),
-                            SizedBox(width: 5),
+                            Image.asset(flagImage, width: 24, height: 24),
+                            const SizedBox(width: 5),
                             Text(value),
                           ],
                         ),
@@ -140,12 +132,11 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                     }).toList(),
                   ),
                 ),
-                SizedBox(width: 10),
-
-                // Phone Number TextField
+                const SizedBox(width: 10),
                 Expanded(
                   child: TextField(
                     controller: _phoneController,
+                    keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
                       hintText: 'หมายเลขโทรศัพท์',
                       filled: true,
@@ -154,122 +145,96 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                         borderRadius: BorderRadius.circular(8),
                         borderSide: BorderSide.none,
                       ),
-                      contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                     ),
-                    keyboardType: TextInputType.phone,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 30), // Space before button
+            const SizedBox(height: 25),
 
-            const SizedBox(height: 5),
-            Center( // Centering the row
+            // เปลี่ยนสกุลเงิน
+            Center(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center, // Center the content
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     'ฉันใช้ THB (฿) เป็นสกุลเงินของฉัน ',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                    ),
+                    style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ChangeScreen()), // แก้ไขหน้าที่ต้องการ
-                      );
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ChangeScreen()));
                     },
-                    child: Text(
+                    child: const Text(
                       'เปลี่ยน >>',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Color.fromARGB(255, 43, 138, 32),  
-                      ),
+                      style: TextStyle(fontSize: 14, color: Color.fromARGB(255, 43, 138, 32)),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20), // เพิ่มช่องว่างระหว่างข้อความ "เปลี่ยน >>" และปุ่ม "เสร็จสิ้น"
+            const SizedBox(height: 40),
 
-            // Next Button
+            // ปุ่มเสร็จสิ้น
             SizedBox(
               width: 200,
               child: ElevatedButton.icon(
-                label: Text("เสร็จสิ้น", style: TextStyle(fontSize: 20)),
+                label: const Text("เสร็จสิ้น", style: TextStyle(fontSize: 18)),
                 onPressed: () {
                   // Navigator.pushNamed(context, '/nextScreen');
                 },
+                icon: const Icon(Icons.check),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 67, 154, 67),
                   foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero,
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-                    Center( // Centering the row
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center, // Center the content
-                        children: [
-                          const Text(
-                            'การสมัครใช้งานถือว่าคุณยอมรับ',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Home2Screen()),
-                              ),
-                            child: Text(
-                              ' ข้อกำหนดการให้บริการ',
-                              style: TextStyle(
-                                fontSize: 18, // Adjust font size dynamically
-                                color: Color.fromARGB(255, 43, 138, 32),
-                               
-                              ),
-                            ),
-                          ),
-                          const Text(
-                            ' และ',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () => Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Home3Screen()),
-                              ),
-                            child: Text(
-                              ' นโยบายความเป็นส่วนตัว',
-                              style: TextStyle(
-                                fontSize: 18, // Adjust font size dynamically
-                                color: Color.fromARGB(255, 43, 138, 32),
-                                
-                              ),
-                            ),
-                          ),
-                          const Text(
-                            '  ของ HarnKeng',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
+            const SizedBox(height: 70),
+
+            // ยอมรับข้อกำหนด/นโยบาย
+            Center(
+              child: Column(
+                children: [
+                  const Text(
+                    'การสมัครใช้งานถือว่าคุณยอมรับ',
+                    style: TextStyle(fontSize: 14, color: Colors.black),
+                  ),
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Home2Screen())),
+                        child: const Text(
+                          'ข้อกำหนดการให้บริการ',
+                          style: TextStyle(fontSize: 14, color: Color.fromARGB(255, 43, 138, 32)),
+                        ),
                       ),
-                    ),
+                      const Text(
+                        ' และ ',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                      GestureDetector(
+                        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Home3Screen())),
+                        child: const Text(
+                          'นโยบายความเป็นส่วนตัว',
+                          style: TextStyle(fontSize: 14, color: Color.fromARGB(255, 43, 138, 32)),
+                        ),
+                      ),
+                      const Text(
+                        ' ของ HarnKeng',
+                        style: TextStyle(fontSize: 14, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

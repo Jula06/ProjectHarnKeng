@@ -20,7 +20,7 @@ class _Singup2ScreenState extends State<Singup2Screen> {
             Navigator.pop(context); // Going back to the previous screen
           },
           child: const Text(
-            "ย้อนกลับ", // Text as the label instead of an icon
+            "กลับ", // Text as the label instead of an icon
             style: TextStyle(
               color: Colors.black,
               fontSize: 16, // Adjust font size if necessary
@@ -55,7 +55,7 @@ class _Singup2ScreenState extends State<Singup2Screen> {
                 ),
               ),
             ),
-            SizedBox(height: 20), // Adjust space after logo
+            SizedBox(height: 70), // Adjust space after logo
 
             // App Name Text
             Row(
@@ -158,7 +158,7 @@ class _Singup2ScreenState extends State<Singup2Screen> {
                 ),
               ],
             ),
-            SizedBox(height: 30), // Space before button
+            SizedBox(height: 50), // Space before button
 
             // Next Button
             SizedBox(
