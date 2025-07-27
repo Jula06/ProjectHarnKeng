@@ -77,20 +77,7 @@ class ChangeScreen extends StatelessWidget {
                     onChanged: (value) {},
                   ),
                 ),
-                ListTile(
-                  title: Row(
-                    children: [
-                      Image.asset('assets/images/japan.png', width: 24), // Placeholder for flag
-                      const SizedBox(width: 10),
-                      const Text('Japan (YEN)'),
-                    ],
-                  ),
-                  leading: Radio<String>(
-                    value: 'CNH',
-                    groupValue: 'selected_currency',
-                    onChanged: (value) {},
-                  ),
-                ),
+              
               ],
             ),
             const Spacer(),
