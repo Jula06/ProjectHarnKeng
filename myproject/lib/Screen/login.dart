@@ -111,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                 child: ElevatedButton.icon(
                   label: Text("เข้าสู่ระบบ", style: TextStyle(fontSize: 20)),
                   onPressed: () {
-                    Navigator.pushNamed(context, '');
+                    Navigator.pushNamed(context, '/page4');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 67, 154, 67),
