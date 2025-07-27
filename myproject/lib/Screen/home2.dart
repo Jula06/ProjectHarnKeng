@@ -23,6 +23,7 @@ class Home2Screen extends StatelessWidget {
             ),
           ),
         ),
+        
         title: Align(
           alignment: Alignment.center,
           child: const Text(
