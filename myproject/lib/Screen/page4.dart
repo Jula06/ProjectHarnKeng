@@ -32,7 +32,7 @@ class Page4Screen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 1, 1, 1),
                     ),
                   ),
                 ],
@@ -42,15 +42,15 @@ class Page4Screen extends StatelessWidget {
               // Activity Section
               Text(
                 "กิจกรรมล่าสุด",
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: TextStyle(fontSize: 18, color: const Color.fromARGB(255, 1, 1, 1)),
               ),
               SizedBox(height: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("คุณเพิ่ม \"Natnicha\" เข้าร่วมกลุ่มนิวยอร์ก", style: TextStyle(color: Colors.white)),
-                  Text("คุณลงกลุ่ม \"นิวยอร์ก\"", style: TextStyle(color: Colors.white)),
-                  Text("คุณสร้างกลุ่ม \"นิวยอร์ก\"", style: TextStyle(color: Colors.white)),
+                  Text("คุณเพิ่ม \"Natnicha\" เข้าร่วมกลุ่มนิวยอร์ก", style: TextStyle(color: Colors.black)),
+                  Text("คุณลงกลุ่ม \"นิวยอร์ก\"", style: TextStyle(color: Colors.black)),
+                  Text("คุณสร้างกลุ่ม \"นิวยอร์ก\"", style: TextStyle(color: Colors.black)),
                 ],
               ),
               SizedBox(height: 30),
@@ -59,10 +59,10 @@ class Page4Screen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(Icons.home, color: Colors.white),
-                  Icon(Icons.group, color: Colors.white),
-                  Icon(Icons.work, color: Colors.white),
-                  Icon(Icons.account_balance_wallet, color: Colors.white),
+                  Icon(Icons.home, color: Colors.black),
+                  Icon(Icons.group, color: Colors.black),
+                  Icon(Icons.work, color: Colors.black),
+                  Icon(Icons.account_balance_wallet, color: Colors.black),
                 ],
               ),
             ],
