@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:myproject/Screen/singup3.dart'; // เพิ่มการนำเข้าไฟล์ signup3.dart
 
-class ChangeScreen extends StatelessWidget {
+class ChangeScreen extends StatefulWidget {
+  @override
+  _ChangeScreenState createState() => _ChangeScreenState();
+}
+
+class _ChangeScreenState extends State<ChangeScreen> {
+  String? selectedCurrency = 'THB'; // Default to Baht (THB)
+
   @override
   Widget build(BuildContext context) {
-    // Get the screen width for dynamic adjustment of font size
-    double screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false, // Prevent the default back button
         leading: TextButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pop(context); // Going back to the previous screen
           },
           child: const Text(
             'ปิด',
             style: TextStyle(
               fontSize: 18,
-              color: Colors.white,  // Adjust text color to match AppBar//////
+              color: Colors.white,
             ),
           ),
         ),
@@ -52,66 +57,101 @@ class ChangeScreen extends StatelessWidget {
                 ListTile(
                   title: Row(
                     children: [
-                      Image.asset('assets/images/thai.png', width: 24), // Placeholder for flag
+                      Image.asset('assets/images/thai.png', width: 24),
                       const SizedBox(width: 10),
                       const Text('Baht (THB)'),
                     ],
                   ),
                   leading: Radio<String>(
                     value: 'THB',
-                    groupValue: 'selected_currency',
-                    onChanged: (value) {},
+                    groupValue: selectedCurrency,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedCurrency = value;
+                      });
+                    },
                   ),
                 ),
                 ListTile(
                   title: Row(
                     children: [
-                      Image.asset('assets/images/usa.png', width: 24), // Placeholder for flag
+                      Image.asset('assets/images/usa.png', width: 24),
                       const SizedBox(width: 10),
                       const Text('United States dollar (USD)'),
                     ],
                   ),
                   leading: Radio<String>(
                     value: 'USD',
-                    groupValue: 'selected_currency',
-                    onChanged: (value) {},
+                    groupValue: selectedCurrency,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedCurrency = value;
+                      });
+                    },
                   ),
                 ),
-              
               ],
             ),
             const Spacer(),
+            // Display the selected currency text
+            Center(
+              child: Text(
+                selectedCurrency == 'THB'
+                    ? 'ฉันใช้ THB (฿) เป็นสกุลเงินของฉัน'
+                    : 'ฉันใช้ USD (\$) เป็นสกุลเงินของฉัน',
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                onPressed: () {},
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.grey, // Gray color
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.zero, // No rounded corners
+                  onPressed: () {
+                    // Navigate to Singup3Screen when cancel is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Singup3Screen(),
+                      ),
+                    );
+                  },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.grey, 
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero, 
+                    ),
+                  ),
+                  child: const Text(
+                    'ยกเลิก',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
-                child: const Text(
-                  'ยกเลิก',
-                  style: TextStyle(fontSize: 16, color: Colors.white), // White text color
-                ),
-              ),
-              const SizedBox(width: 20),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey, // Gray color
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.zero, // No rounded corners
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigate to Singup3Screen when next is pressed
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Singup3Screen(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey, 
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero, 
+                    ),
+                  ),
+                  child: const Text(
+                    'ถัดไป',
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
-                child: const Text(
-                  'ถัดไป',
-                  style: TextStyle(fontSize: 16, color: Colors.white), // White text color
-                ),
-              ),
-
               ],
             ),
           ],
