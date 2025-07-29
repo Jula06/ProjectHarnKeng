@@ -58,7 +58,10 @@ flutter:
   uses-material-design: true
   assets:
       - assets/images/logo.png
-      - assets/images/thai.png
+      - assets/images/logo1.png
+      - assets/images/logo2.png
+      - assets/images/logo3.png
+      - assets/images/logo4.png
       - assets/images/usa.png
       - assets/images/eng.png
       - assets/images/japan.png
