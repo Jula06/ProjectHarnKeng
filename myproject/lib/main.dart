@@ -7,7 +7,8 @@ import 'package:myproject/Screen/home3.dart';
 import 'package:myproject/Screen/home4.dart';
 import 'package:myproject/Screen/login.dart';
 import 'package:myproject/Screen/page.dart';
-import 'package:myproject/Screen/page4.dart';
+import 'package:myproject/Screen/page1.dart';
+import 'package:myproject/Screen/page2.dart';
 import 'package:myproject/Screen/singup2.dart';
 import 'package:myproject/Screen/singup3.dart';
 
@@ -36,8 +37,9 @@ class MyApp extends StatelessWidget {
         '/singup3': (context) => Singup3Screen(),
         '/change': (context) => ChangeScreen(),
         '/login': (context) => LoginScreen(),
-        '/page4': (context) => Page4Screen(),
         '/page': (context) => PageScreen(),
+        '/page1': (context) => Page1Screen(),
+        '/page2': (context) => Page2Screen(),
 
 
 

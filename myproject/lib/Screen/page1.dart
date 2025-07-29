@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class PageScreen extends StatelessWidget {
-  const PageScreen({super.key});
+class Page1Screen extends StatelessWidget {
+  const Page1Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,19 +54,19 @@ class PageScreen extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: 'ยินดีต้อนรับ \n     สู่ HarnKeng,\n',
+                        text: 'จัด จด จ่าย \nทำทั้งหมดจบในที่เดียว\n',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 7, 83, 149),
                         ),
                       ),
                       TextSpan(
-                        text: 'Sopitnapa!',
+                        text: 'HarnKeng เก็บประวัติในรูปแบบของ Chat อ่านง่าย สามารถติดตามยอดใช้จ่ายสบาย ไม่ต้องคอยอัพเดตในรายรับ รายจ่ายแยกต่างหาก',
                         style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 7, 83, 149),
+                          fontSize: 24,
+                          fontWeight: FontWeight.normal,
+                          color: const Color.fromARGB(255, 11, 13, 15),
                         ),
                       ),
                     ],
@@ -77,16 +77,16 @@ class PageScreen extends StatelessWidget {
               SizedBox(height: 60), // Space before the button
 
               // Add the image below the welcome text
-              Image.asset('assets/images/login.png', height: 150), // Add the image here
+              Image.asset('assets/images/i.png', height: 300), // Add the image here
 
               // Button "ถัดไป"
               SizedBox(height: 50), 
               SizedBox(
                 width: 200,
                 child: ElevatedButton.icon(
-                  label: Text("ถัดไป", style: TextStyle(fontSize: 20)),
+                  label: Text("เสร็จ", style: TextStyle(fontSize: 20)),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/page1');
+                    Navigator.pushNamed(context, '/page2');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 81, 83, 81),
