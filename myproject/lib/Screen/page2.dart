@@ -40,7 +40,7 @@ class Page2Screen extends StatelessWidget {
                   IconButton(
                     icon: Icon(Icons.settings, color: Colors.black), // Settings icon
                     onPressed: () {
-                      // Add action for settings icon here
+                      Navigator.pushNamed(context, '/setting');// Add action for settings icon here
                     },
                   ),
                 ],
