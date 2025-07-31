@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:myproject/Screen/singup3.dart'; // เพิ่มการนำเข้าไฟล์ signup3.dart
 
 class ChangeScreen extends StatefulWidget {
+  const ChangeScreen({super.key});
+
   @override
   _ChangeScreenState createState() => _ChangeScreenState();
 }

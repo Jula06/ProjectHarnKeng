@@ -45,7 +45,7 @@ class Page2Screen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
 
               // Search Section with Icon inside the TextField
               Container(
@@ -70,7 +70,7 @@ class Page2Screen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
 
               // JP Image and Add Member Button with rounded corners and blue background
               Container(
@@ -83,7 +83,7 @@ class Page2Screen extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(170), // Rounded corners for the image
-                      child: Image.asset("assets/images/jp.png", width: 500), // Image on the left side
+                      child: Image.asset("assets/images/jp.png", width: 250), // Image on the left side
                     ),
                     SizedBox(width: 10), // Space between image and button
                     Expanded(
@@ -108,7 +108,7 @@ class Page2Screen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 5),
 
               // Activity Section with Blue Background
               Container(
@@ -124,13 +124,13 @@ class Page2Screen extends StatelessWidget {
                       "กิจกรรมล่าสุด",
                       style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 5),
                     Row(
                       children: [
                         Image.asset("assets/images/logo1.png", width: 40), // Add your logo image here
                         SizedBox(width: 10),
                         Text(
-                          "คุณเพิ่ม \"Natnicha\" เข้าร่วมกลุ่มนิวยอร์ก",
+                          "คุณเพิ่ม \"Natnicha\" เข้าร่วมกลุ่มญี่ปุ่น",
                           style: TextStyle(color: Colors.black),
                         ),
                       ],
@@ -140,7 +140,7 @@ class Page2Screen extends StatelessWidget {
                         Image.asset("assets/images/logo1.png", width: 40),
                         SizedBox(width: 10),
                         Text(
-                          "คุณลงกลุ่ม \"นิวยอร์ก\"",
+                          "คุณลงกลุ่ม \"ญี่ปุ่น\"",
                           style: TextStyle(color: Colors.black),
                         ),
                       ],
@@ -150,7 +150,7 @@ class Page2Screen extends StatelessWidget {
                         Image.asset("assets/images/logo1.png", width: 40),
                         SizedBox(width: 10),
                         Text(
-                          "คุณสร้างกลุ่ม \"นิวยอร์ก\"",
+                          "คุณสร้างกลุ่ม \"ญี่ปุ่น\"",
                           style: TextStyle(color: Colors.black),
                         ),
                       ],
@@ -158,7 +158,7 @@ class Page2Screen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
 
               // Navigation Icons Section with Text Labels and Blue Background
               Container(

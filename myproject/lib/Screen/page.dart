@@ -44,7 +44,7 @@ class PageScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 150), 
+              SizedBox(height: 70), 
 
               // ข้อความ "ยินดีต้อนรับ"
               Align(
@@ -74,13 +74,13 @@ class PageScreen extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 60), // Space before the button
+              SizedBox(height: 30), // Space before the button
 
               // Add the image below the welcome text
               Image.asset('assets/images/login.png', height: 150), // Add the image here
 
               // Button "ถัดไป"
-              SizedBox(height: 50), 
+              SizedBox(height: 20), 
               SizedBox(
                 width: 200,
                 child: ElevatedButton.icon(
