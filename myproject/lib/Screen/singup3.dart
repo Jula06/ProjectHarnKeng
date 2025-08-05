@@ -4,13 +4,15 @@ import 'package:myproject/Screen/home2.dart';
 import 'package:myproject/Screen/home3.dart';
 
 class Singup3Screen extends StatefulWidget {
+  const Singup3Screen({super.key});
+
   @override
   _Singup3ScreenState createState() => _Singup3ScreenState();
 }
 
 class _Singup3ScreenState extends State<Singup3Screen> {
   String? _selectedCountryCode = '+66'; // Default to Thailand code
-  TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

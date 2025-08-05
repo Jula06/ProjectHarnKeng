@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Home4Screen extends StatelessWidget {
+  const Home4Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
     // Get the screen width for dynamic adjustment of font size
@@ -42,7 +44,7 @@ class Home4Screen extends StatelessWidget {
             children: [
               // Centered image
               Center(
-                child: Container(
+                child: SizedBox(
                   width: 120,  // Adjust width here
                   height: 120, // Adjust height here
                   child: Image.asset('assets/images/logo.png', fit: BoxFit.cover),

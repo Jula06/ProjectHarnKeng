@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Singup2Screen extends StatefulWidget {
+  const Singup2Screen({super.key});
+
   @override
   _Singup2ScreenState createState() => _Singup2ScreenState();
 }
 
 class _Singup2ScreenState extends State<Singup2Screen> {
   String? _selectedCountryCode = '+66'; // Default to Thailand code
-  TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
