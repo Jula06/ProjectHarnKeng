@@ -191,7 +191,7 @@ class _Singup3ScreenState extends State<Singup3Screen> {
                 child: ElevatedButton.icon(
                   label: const Text("เสร็จสิ้น", style: TextStyle(fontSize: 18)),
                   onPressed: () {
-                    // Navigator.pushNamed(context, '/nextScreen');
+                    Navigator.pushNamed(context, '/page');
                   },
                   icon: const Icon(Icons.check),
                   style: ElevatedButton.styleFrom(

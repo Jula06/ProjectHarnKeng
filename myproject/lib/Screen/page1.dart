@@ -24,7 +24,7 @@ class Page1Screen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // โลโก้วงกลม (ปรับให้ขึ้นไปด้านบน)
-              SizedBox(height: 20), // Move the logo up by adjusting the space here
+              SizedBox(height: 10), // Move the logo up by adjusting the space here
               Container(
                 height: 150,
                 width: 150,
@@ -44,7 +44,7 @@ class Page1Screen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20), 
+              SizedBox(height: 10), 
 
               // ข้อความ "ยินดีต้อนรับ"
               Align(
@@ -64,7 +64,7 @@ class Page1Screen extends StatelessWidget {
                       TextSpan(
                         text: 'HarnKeng เก็บประวัติในรูปแบบของ Chat อ่านง่าย สามารถติดตามยอดใช้จ่ายสบาย ไม่ต้องคอยอัพเดตในรายรับ รายจ่ายแยกต่างหาก',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 20,
                           fontWeight: FontWeight.normal,
                           color: const Color.fromARGB(255, 11, 13, 15),
                         ),
