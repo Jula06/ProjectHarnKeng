@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "423691984647",
+    "project_id": "harnkeng",
+    "storage_bucket": "harnkeng.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423691984647:android:7715f2a06c83b1192bafa2",
+        "android_client_info": {
+          "package_name": "com.example.myproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLp7iqHKOy93LqyaR0Uimlrl2dm4rQvOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

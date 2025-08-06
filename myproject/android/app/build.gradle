@@ -1,0 +1,32 @@
+// Root-level build.gradle.kts
+
+// Apply Google Services plugin (but do not apply to root)
+plugins {
+    id("com.google.gms.google-services") version "4.4.3" apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Optional: redirect build outputs to ../../build for cleanliness
+val newBuildDir = rootProject.layout.buildDirectory.dir("../../build").get()
+rootProject.layout.buildDirectory.set(newBuildDir)
+
+subprojects {
+    val newSubprojectBuildDir = newBuildDir.dir(project.name)
+    project.layout.buildDirectory.set(newSubprojectBuildDir)
+}
+
+// Ensure that all subprojects depend on :app before being evaluated
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+// Clean task
+tasks.register<Delete>("clean") {
+    delete(rootProject.layout.buildDirectory)
+}
